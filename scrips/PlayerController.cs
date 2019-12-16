@@ -11,17 +11,19 @@ public Text countText;
 public Text winText;
 	void SetCountText(){
 		countText.text="Score : " + count.ToString();
-		if (count >= 13) {
- 		winText.text = "CRACK !!";
-		 
-}
+		if (count >= 18) {
+            winText.text = "CRACK !!";
+        rb.gameObject.SetActive(false);
+
+        }
 	}
 
 	void Start () {
 		rb = GetComponent<Rigidbody>();
 		count=0;
 		SetCountText();
-		winText.text = "";
+		
+       
 
 	}
 	
